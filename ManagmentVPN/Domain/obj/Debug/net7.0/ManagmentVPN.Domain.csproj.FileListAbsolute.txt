@@ -1,0 +1,11 @@
+D:\Projects\dotnet\ManagmentVPN\Domain\bin\Debug\net7.0\ManagmentVPN.Domain.deps.json
+D:\Projects\dotnet\ManagmentVPN\Domain\bin\Debug\net7.0\ManagmentVPN.Domain.dll
+D:\Projects\dotnet\ManagmentVPN\Domain\bin\Debug\net7.0\ManagmentVPN.Domain.pdb
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ManagmentVPN.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ManagmentVPN.Domain.AssemblyInfoInputs.cache
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ManagmentVPN.Domain.AssemblyInfo.cs
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ManagmentVPN.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ManagmentVPN.Domain.dll
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\refint\ManagmentVPN.Domain.dll
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ManagmentVPN.Domain.pdb
+D:\Projects\dotnet\ManagmentVPN\Domain\obj\Debug\net7.0\ref\ManagmentVPN.Domain.dll

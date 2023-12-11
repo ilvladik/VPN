@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JdSIL3APwKdaPF6EzJCGhnd+3RF3K0LUNHfW5KS8aYD7sk9yj3zc8aLQI7KvbhV+M7zCs2irkyGi5IBzUJ/TjA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

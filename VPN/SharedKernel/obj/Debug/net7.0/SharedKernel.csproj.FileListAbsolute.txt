@@ -1,0 +1,11 @@
+D:\Projects\dotnet\VPN\SharedKernel\bin\Debug\net7.0\SharedKernel.deps.json
+D:\Projects\dotnet\VPN\SharedKernel\bin\Debug\net7.0\SharedKernel.dll
+D:\Projects\dotnet\VPN\SharedKernel\bin\Debug\net7.0\SharedKernel.pdb
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\SharedKernel.AssemblyInfoInputs.cache
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\SharedKernel.AssemblyInfo.cs
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\SharedKernel.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\SharedKernel.dll
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\refint\SharedKernel.dll
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\SharedKernel.pdb
+D:\Projects\dotnet\VPN\SharedKernel\obj\Debug\net7.0\ref\SharedKernel.dll

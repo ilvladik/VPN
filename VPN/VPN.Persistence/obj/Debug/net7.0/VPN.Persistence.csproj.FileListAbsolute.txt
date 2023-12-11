@@ -1,0 +1,15 @@
+D:\Projects\dotnet\VPN\VPN.Persistence\bin\Debug\net7.0\VPN.Persistence.deps.json
+D:\Projects\dotnet\VPN\VPN.Persistence\bin\Debug\net7.0\VPN.Persistence.dll
+D:\Projects\dotnet\VPN\VPN.Persistence\bin\Debug\net7.0\VPN.Persistence.pdb
+D:\Projects\dotnet\VPN\VPN.Persistence\bin\Debug\net7.0\VPN.Domain.dll
+D:\Projects\dotnet\VPN\VPN.Persistence\bin\Debug\net7.0\VPN.Domain.pdb
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.csproj.AssemblyReference.cache
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.AssemblyInfoInputs.cache
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.AssemblyInfo.cs
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.csproj.CopyComplete
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.dll
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\refint\VPN.Persistence.dll
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\VPN.Persistence.pdb
+D:\Projects\dotnet\VPN\VPN.Persistence\obj\Debug\net7.0\ref\VPN.Persistence.dll

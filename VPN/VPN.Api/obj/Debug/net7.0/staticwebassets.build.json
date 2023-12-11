@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BEBefsBWNQLyOwhL0mMKTMFSjanmRRtuGLFyluznczc=",
+  "Source": "VPN.Api",
+  "BasePath": "_content/VPN.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
