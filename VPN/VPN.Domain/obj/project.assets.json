@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj",
+      "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj",
       "projectName": "VPN.Domain",
-      "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj",
+      "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj",
       "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\obj\\",
+      "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",

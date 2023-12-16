@@ -18,16 +18,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "SharedKernel/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/SharedKernel.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SharedKernel.dll": {}
-        }
-      },
       "VPN.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -70,11 +60,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "SharedKernel/1.0.0": {
-      "type": "project",
-      "path": "../SharedKernel/SharedKernel.csproj",
-      "msbuildProject": "../SharedKernel/SharedKernel.csproj"
-    },
     "VPN.Domain/1.0.0": {
       "type": "project",
       "path": "../VPN.Domain/VPN.Domain.csproj",
@@ -84,7 +69,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 7.0.0",
-      "SharedKernel >= 1.0.0",
       "VPN.Domain >= 1.0.0"
     ]
   },
@@ -94,11 +78,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj",
+      "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj",
       "projectName": "VPN.Application",
-      "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj",
+      "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj",
       "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\obj\\",
+      "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,11 +99,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj": {
-              "projectPath": "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj"
-            },
-            "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
-              "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj"
+            "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
+              "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj"
             }
           }
         }

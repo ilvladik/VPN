@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using VPN.Application.OutlineApi;
 using VPN.Application.Services;
 
 namespace VPN.Persistence
@@ -9,7 +10,8 @@ namespace VPN.Persistence
         {
             serviceCollection
                 .AddScoped<IKeyService, KeyService>()
-                .AddScoped<IServerService, ServerService>();
+                .AddScoped<IServerService, ServerService>()
+                .AddScoped<IOutlineProvider, OutlineProvider>(); 
             return serviceCollection;
         }
     }

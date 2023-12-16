@@ -1,36 +1,53 @@
-﻿using SharedKernel.Dtos.Server;
+﻿using VPN.Application.OutlineApi;
+using VPN.Application.OutlineApi.Entities;
 using VPN.Domain;
 using VPN.Domain.Entities;
+using VPN.Domain.Exceptions;
 
 namespace VPN.Application.Services
 {
     public class ServerService : IServerService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IOutlineProvider _outlineProvider;
         private bool disposedValue;
 
-        public ServerService(IUnitOfWork unitOfWork)
+        public ServerService(IUnitOfWork unitOfWork, IOutlineProvider outlineProvider)
         {
             _unitOfWork = unitOfWork;
+            _outlineProvider = outlineProvider;
         }
 
-        public async Task<ServerDtoResponse> AddAsync(ServerDtoAddRequest serverDtoAddRequest)
+        public async Task<Server> AddAsync(string networkId, int apiPort, string apiPrefix)
         {
-            Server server = await _unitOfWork.Servers.AddAsync(new Server()
+            var outlineKeys = await _outlineProvider.GetAllKeysAsync(new OutlineServer()
+            {
+                NetworkId = networkId,
+                ApiPort = apiPort,
+                ApiPrefix = apiPrefix
+            });
+            var serverId = Guid.NewGuid();
+            var keys = outlineKeys.Select(o => new Key()
             {
                 Id = Guid.NewGuid(),
-                NetworkId = serverDtoAddRequest.NetworkId,
-                ApiPort = serverDtoAddRequest.ApiPort,
-                ApiPrefix = serverDtoAddRequest.ApiPrefix,
-            });
+                OutlineId = o.Id,
+                Name = o.Name,
+                Password = o.Password,
+                KeyPort = o.Port,
+                Method = o.Method,
+                ServerId = serverId
+            }).ToList();
+            var server = new Server()
+            {
+                Id = serverId,
+                NetworkId = networkId,
+                ApiPort = apiPort,
+                ApiPrefix = apiPrefix,
+                Keys = keys
+            };
+            await _unitOfWork.Servers.AddAsync(server);
             await _unitOfWork.SaveChangesAsync();
-            return new ServerDtoResponse(server.Id, server.NetworkId, server.ApiPort, server.ApiPrefix);
-        }
-
-        public async Task<IEnumerable<ServerDtoResponse>> GetAllAsync()
-        {
-            var server = await _unitOfWork.Servers.GetAllAsync();
-            return server.Select(s => new ServerDtoResponse(s.Id, s.NetworkId, s.ApiPort, s.ApiPrefix));
+            return server;
         }
 
         public async Task DeleteAsync(Guid id)
@@ -39,19 +56,29 @@ namespace VPN.Application.Services
             await _unitOfWork.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<Server>> GetAllAsync()
+        {
+            return await _unitOfWork.Servers.GetAllAsync();
+        }
 
+        public async Task<Server> GetByIdAsync(Guid id)
+        {
+            var server = await _unitOfWork.Servers.GetByIdAsync(id);
+            if (server == null)
+                throw new ServerNotFoundException($"Server with id: {id} not found");
+            return server;
+        }
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
             {
                 if (disposing)
                 {
-                   _unitOfWork.Dispose();
+                    _unitOfWork.Dispose();
                 }
                 disposedValue = true;
             }
         }
-
 
         public void Dispose()
         {

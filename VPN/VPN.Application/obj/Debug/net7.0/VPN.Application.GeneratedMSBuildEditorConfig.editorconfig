@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VPN.Application
-build_property.ProjectDir = D:\Projects\dotnet\VPN\VPN.Application\
+build_property.ProjectDir = D:\Projects\dotnet\VPN\VPN\VPN.Application\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,72 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\dotnet\\VPN\\VPN.Api\\VPN.Api.csproj": {}
+    "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Api\\VPN.Api.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj": {
+    "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Api\\VPN.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj",
-        "projectName": "SharedKernel",
-        "projectPath": "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj",
-        "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\dotnet\\VPN\\SharedKernel\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Projects\\dotnet\\VPN\\VPN.Api\\VPN.Api.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN.Api\\VPN.Api.csproj",
+        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Api\\VPN.Api.csproj",
         "projectName": "VPN.Api",
-        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Api\\VPN.Api.csproj",
+        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Api\\VPN.Api.csproj",
         "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN.Api\\obj\\",
+        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,17 +28,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj"
+              "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj": {
+                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj"
               },
-              "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj"
+              "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
+                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj"
               },
-              "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj"
-              },
-              "D:\\Projects\\dotnet\\VPN\\VPN.Persistence\\VPN.Persistence.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Persistence\\VPN.Persistence.csproj"
+              "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Infrastructure\\VPN.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Infrastructure\\VPN.Infrastructure.csproj"
               }
             }
           }
@@ -108,10 +50,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNet.Mvc": {
-              "target": "Package",
-              "version": "[5.3.0, )"
-            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -148,14 +86,14 @@
         }
       }
     },
-    "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj": {
+    "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj",
         "projectName": "VPN.Application",
-        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\VPN.Application.csproj",
+        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\VPN.Application.csproj",
         "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN.Application\\obj\\",
+        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -172,11 +110,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\SharedKernel\\SharedKernel.csproj"
-              },
-              "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj"
+              "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
+                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj"
               }
             }
           }
@@ -216,14 +151,14 @@
         }
       }
     },
-    "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
+    "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj",
         "projectName": "VPN.Domain",
-        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj",
+        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj",
         "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\obj\\",
+        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -271,14 +206,14 @@
         }
       }
     },
-    "D:\\Projects\\dotnet\\VPN\\VPN.Persistence\\VPN.Persistence.csproj": {
+    "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Infrastructure\\VPN.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN.Persistence\\VPN.Persistence.csproj",
-        "projectName": "VPN.Persistence",
-        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Persistence\\VPN.Persistence.csproj",
+        "projectUniqueName": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Infrastructure\\VPN.Infrastructure.csproj",
+        "projectName": "VPN.Infrastructure",
+        "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Infrastructure\\VPN.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN.Persistence\\obj\\",
+        "outputPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -295,8 +230,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
-                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj"
+              "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj": {
+                "projectPath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj"
               }
             }
           }
@@ -315,9 +250,9 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

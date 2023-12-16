@@ -1,11 +1,13 @@
-﻿using SharedKernel.Dtos.Server;
+﻿
+using VPN.Domain.Entities;
 
 namespace VPN.Application.Services
 {
     public interface IServerService : IDisposable
     {
-        Task<ServerDtoResponse> AddAsync(ServerDtoAddRequest serverDtoAddRequest);
-        Task<IEnumerable<ServerDtoResponse>> GetAllAsync();
+        Task<Server> AddAsync(string networkId, int apiPort, string apiPrefix);
         Task DeleteAsync(Guid id);
+        Task<IEnumerable<Server>> GetAllAsync();
+        Task<Server> GetByIdAsync(Guid id);
     }
 }

@@ -26,7 +26,7 @@ namespace Api.Controllers
         public async Task<IActionResult> Index()
         {
             var server = await _serverService.GetAllAsync();
-            return new JsonResult(server);
+            return Ok(server);
         }
 
         [HttpPost]
@@ -45,15 +45,8 @@ namespace Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            try
-            {
-                await _serverService.DeleteByIdAsync(id);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _serverService.DeleteByIdAsync(id);
+            return Ok();
         }
 
         [HttpPost("{id}/allow-create")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j9LoUcEeuLB9j3BI87coMxdCdAfg16uUTgoTvAowmPps8SxaGNq3W20j3jUjby/l5uwdXzB9d6kENrrihaljXA==",
+  "dgSpecHash": "6MnVxKFJ9IicDkAV6M2RpgCRzwtqled5PNYf3ITAy4Py4xI8K/RSsdKCv6eWcm+VSzYxdKbmcUmZcbOOTl/v2Q==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\dotnet\\VPN\\VPN.Domain\\VPN.Domain.csproj",
+  "projectFilePath": "D:\\Projects\\dotnet\\VPN\\VPN\\VPN.Domain\\VPN.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

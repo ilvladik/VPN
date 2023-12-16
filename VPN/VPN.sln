@@ -5,15 +5,11 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPN.Domain", "VPN.Domain\VPN.Domain.csproj", "{3BEC9093-EA98-4D62-B321-F5EE294FBDAA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPN.Persistence", "VPN.Persistence\VPN.Persistence.csproj", "{91C096BD-AB53-4381-B39C-2ADD845762C7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPN.Application", "VPN.Application\VPN.Application.csproj", "{0956DFA2-912F-4805-97C3-E3B9A7F49217}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPN.Api", "VPN.Api\VPN.Api.csproj", "{CD0D0401-3927-4B2F-B315-B40B2B2918B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel", "SharedKernel\SharedKernel.csproj", "{66ABD52C-0F73-4A24-97DA-19A133026A52}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{39287676-B9AE-4ADA-8FBB-31DF90EFD78A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VPN.Infrastructure", "VPN.Infrastructure\VPN.Infrastructure.csproj", "{C91DDA29-9020-4D8A-87E2-A717DFEE46A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +21,6 @@ Global
 		{3BEC9093-EA98-4D62-B321-F5EE294FBDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BEC9093-EA98-4D62-B321-F5EE294FBDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BEC9093-EA98-4D62-B321-F5EE294FBDAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91C096BD-AB53-4381-B39C-2ADD845762C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91C096BD-AB53-4381-B39C-2ADD845762C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91C096BD-AB53-4381-B39C-2ADD845762C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91C096BD-AB53-4381-B39C-2ADD845762C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0956DFA2-912F-4805-97C3-E3B9A7F49217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0956DFA2-912F-4805-97C3-E3B9A7F49217}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0956DFA2-912F-4805-97C3-E3B9A7F49217}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,14 +29,10 @@ Global
 		{CD0D0401-3927-4B2F-B315-B40B2B2918B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD0D0401-3927-4B2F-B315-B40B2B2918B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD0D0401-3927-4B2F-B315-B40B2B2918B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66ABD52C-0F73-4A24-97DA-19A133026A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66ABD52C-0F73-4A24-97DA-19A133026A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66ABD52C-0F73-4A24-97DA-19A133026A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66ABD52C-0F73-4A24-97DA-19A133026A52}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39287676-B9AE-4ADA-8FBB-31DF90EFD78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39287676-B9AE-4ADA-8FBB-31DF90EFD78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39287676-B9AE-4ADA-8FBB-31DF90EFD78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39287676-B9AE-4ADA-8FBB-31DF90EFD78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91DDA29-9020-4D8A-87E2-A717DFEE46A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91DDA29-9020-4D8A-87E2-A717DFEE46A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91DDA29-9020-4D8A-87E2-A717DFEE46A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91DDA29-9020-4D8A-87E2-A717DFEE46A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

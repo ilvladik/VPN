@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using SharedKernel.Dtos.Server;
-using SharedKernel;
+﻿using Microsoft.AspNetCore.Mvc;
 using VPN.Application.Services;
-using SharedKernel.Dtos.Key;
+using VPN.Domain.Exceptions;
 
 namespace VPN.Api.Controllers
 {
@@ -13,75 +10,57 @@ namespace VPN.Api.Controllers
     public class KeyController : ControllerBase, IDisposable
     {
         private readonly IKeyService _keyService;
-
-        public KeyController(IKeyService keyService, ILogger<ServerController> logger)
-        {
-            _keyService = keyService;
-            _logger = logger;
-        }
-        private readonly ILogger<ServerController> _logger;
         private bool disposedValue;
 
-        [HttpPost]
-        public async Task<Response<KeyDtoResponse>> Add()
+        public KeyController(IKeyService keyService)
+        {
+            _keyService = keyService;
+        }
+
+        [HttpPost("{id}")]
+        public async Task<IActionResult> Add(Guid serverId)
         {
             try
             {
-                KeyDtoResponse keyDtoResponse = await _keyService.CreateAsync();
-                _logger.LogInformation("Key Created");
-                return new Response<KeyDtoResponse>() { IsSuccess = true, Dto = keyDtoResponse, Errors = new() };
-            }
-            catch (Exception ex)
+                return Ok(await _keyService.CreateAsync(serverId));
+            } 
+            catch (ServerNotFoundException exception)
             {
-                return new Response<KeyDtoResponse>() { IsSuccess = false, Errors = new() { $"{ex.GetType()}: {ex.Message}" } };
+                return NotFound(exception.Message);
             }
         }
 
         [HttpGet]
-        public async Task<Response<IEnumerable<KeyDtoResponse>>> GetAll()
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await _keyService.GetAllAsync());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
         {
             try
             {
-                IEnumerable<KeyDtoResponse> serverDtoResponse = await _keyService.GetAllAsync();
-                _logger.LogInformation("Get All Keys");
-                return new Response<IEnumerable<KeyDtoResponse>>() { IsSuccess = true, Dto = serverDtoResponse, Errors = new() };
-            }
-            catch (Exception ex)
+                return Ok(await _keyService.GetByIdAsync(id));
+            } 
+            catch (Domain.Exceptions.KeyNotFoundException exception)
             {
-                return new Response<IEnumerable<KeyDtoResponse>>() { IsSuccess = false, Errors = new() { $"{ex.GetType()}: {ex.Message}" } };
+                return NotFound(exception.Message);
             }
         }
 
         [HttpGet("server/{serverId}")]
-        public async Task<Response<IEnumerable<KeyDtoResponse>>> GetAllByServerId(Guid serverId)
+        public async Task<IActionResult> GetAllByServerId(Guid serverId)
         {
-            try
-            {
-                IEnumerable<KeyDtoResponse> serverDtoResponse = await _keyService.GetByServerIdAsync(serverId);
-                _logger.LogInformation("Get All Keys By ServerId");
-                return new Response<IEnumerable<KeyDtoResponse>>() { IsSuccess = true, Dto = serverDtoResponse, Errors = new() };
-            }
-            catch (Exception ex)
-            {
-                return new Response<IEnumerable<KeyDtoResponse>>() { IsSuccess = false, Errors = new() { $"{ex.GetType()}: {ex.Message}" } };
-            }
+            return Ok(await _keyService.GetByServerIdAsync(serverId));
         }
 
         [HttpDelete("{id}")]
-        public async Task<Response<KeyDtoResponse>> Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            try
-            {
-                await _keyService.DeleteAsync(id);
-                _logger.LogInformation("Key Deleted");
-                return new Response<KeyDtoResponse>() { IsSuccess = true, Errors = new() };
-            }
-            catch (Exception ex)
-            {
-                return new Response<KeyDtoResponse>() { IsSuccess = false, Errors = new() { $"{ex.GetType()}: {ex.Message}" } };
-            }
+            await _keyService.DeleteAsync(id);
+            return Ok();
         }
-
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
@@ -90,7 +69,6 @@ namespace VPN.Api.Controllers
                 {
                     _keyService.Dispose();
                 }
-
                 disposedValue = true;
             }
         }

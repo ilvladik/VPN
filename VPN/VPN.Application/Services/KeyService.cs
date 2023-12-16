@@ -1,47 +1,79 @@
-﻿using SharedKernel.Dtos.Key;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VPN.Application.OutlineApi;
+using VPN.Application.OutlineApi.Entities;
 using VPN.Domain;
+using VPN.Domain.Entities;
+using VPN.Domain.Exceptions;
 
 namespace VPN.Application.Services
 {
     internal class KeyService : IKeyService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IOutlineProvider _outlineProvider;
         private bool disposedValue;
 
-        public KeyService(IUnitOfWork unitOfWork)
+        public KeyService(IUnitOfWork unitOfWork, IOutlineProvider outlineProvider)
         {
             _unitOfWork = unitOfWork;
-        }
-        public async Task<IEnumerable<KeyDtoResponse>> GetByServerIdAsync(Guid id)
-        {
-            var keys = await _unitOfWork.Keys.GetByServerIdAsync(id);
-            return keys.Select(k => new KeyDtoResponse(k.Id, k.Password, k.KeyPort, k.Method, k.ServerId)).ToList();
+            _outlineProvider = outlineProvider;
         }
 
-        public async Task<IEnumerable<KeyDtoResponse>> GetAllAsync()
+        public async Task<Key> CreateAsync(Guid id)
         {
-            var keys = await _unitOfWork.Keys.GetAllAsync();
-            return keys.Select(k => new KeyDtoResponse(k.Id, k.Password, k.KeyPort, k.Method, k.ServerId)).ToList();
-        }
-
-        public async Task<KeyDtoResponse> CreateAsync()
-        {
-            var servers = await _unitOfWork.Servers.GetAllAsync();
-            var min = servers.MinBy(s => s.Keys?.Count());
-            var key = await _unitOfWork.Keys.CreateAsync(min.Id);
+            var server = await _unitOfWork.Servers.GetByIdAsync(id);
+            var outlineKey = await _outlineProvider.CreateKeyAsync(new OutlineServer()
+            {
+                NetworkId = server.NetworkId,
+                ApiPort = server.ApiPort,
+                ApiPrefix = server.ApiPrefix,
+            });
+            Key key = new Key()
+            {
+                Id = Guid.NewGuid(),
+                OutlineId = outlineKey.Id,
+                Name = outlineKey.Name,
+                Password = outlineKey.Password,
+                Method = outlineKey.Method,
+                KeyPort = outlineKey.Port,
+                ServerId = server.Id
+            };
+            await _unitOfWork.Keys.AddAsync(key);
             await _unitOfWork.SaveChangesAsync();
-            return new KeyDtoResponse(key.Id, key.Password, key.KeyPort, key.Method, key.ServerId);
+            return key;
         }
 
         public async Task DeleteAsync(Guid id)
         {
+            var key = await _unitOfWork.Keys.GetByIdAsync(id);
+            if (key == null)
+                return;
             await _unitOfWork.Keys.DeleteByIdAsync(id);
+            await _outlineProvider.DeleteKeyAsync(new OutlineServer()
+            {
+                NetworkId = key.Server!.NetworkId,
+                ApiPort = key.Server.ApiPort,
+                ApiPrefix = key.Server.ApiPrefix
+            }, key.OutlineId);
             await _unitOfWork.SaveChangesAsync();
+        }
+
+        public async Task<Key> GetByIdAsync(Guid id)
+        {
+            var key = await _unitOfWork.Keys.GetByIdAsync(id);
+            if (key == null) throw new Domain.Exceptions.KeyNotFoundException($"Key with id: {id} not found");
+            return key;
+        }
+
+        public async Task<IEnumerable<Key>> GetByServerIdAsync(Guid id)
+        {
+            var keys = await _unitOfWork.Keys.GetByServerIdAsync(id);
+            return keys;
+        }
+
+        public async Task<IEnumerable<Key>> GetAllAsync()
+        {
+            var keys = await _unitOfWork.Keys.GetAllAsync();
+            return keys;
         }
 
         protected virtual void Dispose(bool disposing)
