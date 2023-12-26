@@ -1,0 +1,16 @@
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\bin\Debug\net7.0\ManagmentVPN.Infrastructure.deps.json
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\bin\Debug\net7.0\ManagmentVPN.Infrastructure.dll
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\bin\Debug\net7.0\ManagmentVPN.Infrastructure.pdb
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\bin\Debug\net7.0\ManagmentVPN.Domain.dll
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\bin\Debug\net7.0\ManagmentVPN.Domain.pdb
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.AssemblyInfo.cs
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.sourcelink.json
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.csproj.CopyComplete
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.dll
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\refint\ManagmentVPN.Infrastructure.dll
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ManagmentVPN.Infrastructure.pdb
+D:\Projects\dotnet\VPN\ManagmentVPN\ManagmentVPN.Infrastructure\obj\Debug\net7.0\ref\ManagmentVPN.Infrastructure.dll

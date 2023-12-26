@@ -8,7 +8,10 @@ namespace VPN.Infrastructure.Context
     {
         public DbSet<Server> Servers { get; set; }
         public DbSet<Key> Keys { get; set; }
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "14M61XL08Scb+Gey8T1zOaMKWUxJ8e8+WMKUNuEnLkE=",
+  "Source": "ManagmentVPN.Api",
+  "BasePath": "_content/ManagmentVPN.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

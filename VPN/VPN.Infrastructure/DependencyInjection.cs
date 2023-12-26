@@ -11,10 +11,11 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection)
         {
+            string mysqlConnectionString = "server=vpn-db;database=vpn;user=vpn;password=password";
             serviceCollection
-                .AddDbContext<ApplicationDbContext>(options =>
-                    options.UseMySql("Server=VpnApiData;Database=VpnApiDatabase;User=vpn;Password=12345;", 
-                    ServerVersion.AutoDetect("Server=VpnApiData;Database=VpnApiDatabase;User=vpn;Password=12345;")))
+                .AddDbContext<ApplicationDbContext>(
+                    o => o.UseMySql(mysqlConnectionString, 
+                    ServerVersion.AutoDetect(mysqlConnectionString)))
                 .AddScoped<IUnitOfWork, UnitOfWork>()
                 .AddScoped<IKeyRepository, KeyRepositoriy>()
                 .AddScoped<IServerRepository, ServerRepositoriy>();

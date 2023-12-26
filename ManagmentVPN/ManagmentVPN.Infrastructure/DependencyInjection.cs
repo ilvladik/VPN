@@ -1,7 +1,9 @@
 ﻿using ManagmentVPN.Domain;
 using ManagmentVPN.Domain.Repositories;
 using ManagmentVPN.Infrastructure;
+using ManagmentVPN.Infrastructure.Context;
 using ManagmentVPN.Infrastructure.Repositoies;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -10,7 +12,9 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection)
         {
+            string mysqlConnectionString = "server=managmentvpn-db;database=managmentvpn;user=managment;password=password";
             serviceCollection
+                .AddDbContext<ApplicationDbContext>(o => o.UseMySql(mysqlConnectionString, ServerVersion.AutoDetect(mysqlConnectionString)))
                 .AddScoped<IUnitOfWork, UnitOfWork>()
                 .AddScoped<IKeyRepository, KeyRepository>()
                 .AddScoped<IServerRepository, ServerRepository>()

@@ -8,61 +8,15 @@
     ".NETCoreApp,Version=v7.0": {
       "VPN.Api/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNet.Mvc": "5.3.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.13",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.5",
-          "SharedKernel": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
           "VPN.Application": "1.0.0",
           "VPN.Domain": "1.0.0",
-          "VPN.Persistence": "1.0.0"
+          "VPN.Infrastructure": "1.0.0"
         },
         "runtime": {
           "VPN.Api.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Mvc/5.3.0": {
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "3.3.0",
-          "Microsoft.AspNet.WebPages": "3.3.0"
-        },
-        "runtime": {
-          "lib/net45/System.Web.Mvc.dll": {
-            "assemblyVersion": "5.3.0.0",
-            "fileVersion": "5.3.61130.707"
-          }
-        }
-      },
-      "Microsoft.AspNet.Razor/3.3.0": {
-        "runtime": {
-          "lib/net45/System.Web.Razor.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          }
-        }
-      },
-      "Microsoft.AspNet.WebPages/3.3.0": {
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "3.3.0",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "runtime": {
-          "lib/net45/System.Web.Helpers.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          },
-          "lib/net45/System.Web.WebPages.Deployment.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          },
-          "lib/net45/System.Web.WebPages.Razor.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          },
-          "lib/net45/System.Web.WebPages.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          }
         }
       },
       "Microsoft.AspNetCore.OpenApi/7.0.13": {
@@ -100,15 +54,15 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/7.0.14": {},
-      "Microsoft.EntityFrameworkCore.Relational/7.0.11": {
+      "Microsoft.EntityFrameworkCore.Relational/7.0.2": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.14",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "7.0.11.0",
-            "fileVersion": "7.0.1123.40906"
+            "assemblyVersion": "7.0.2.0",
+            "fileVersion": "7.0.222.58006"
           }
         }
       },
@@ -163,36 +117,23 @@
         }
       },
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.19.5": {},
-      "Microsoft.Web.Infrastructure/1.0.0": {
+      "MySqlConnector/2.2.5": {
         "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.20105.407"
+          "lib/net7.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.5.0"
           }
         }
       },
-      "Npgsql/7.0.6": {
+      "Pomelo.EntityFrameworkCore.MySql/7.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.2",
+          "MySqlConnector": "2.2.5"
         },
         "runtime": {
-          "lib/net7.0/Npgsql.dll": {
-            "assemblyVersion": "7.0.6.0",
-            "fileVersion": "7.0.6.0"
-          }
-        }
-      },
-      "Npgsql.EntityFrameworkCore.PostgreSQL/7.0.11": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.14",
-          "Microsoft.EntityFrameworkCore.Abstractions": "7.0.14",
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.11",
-          "Npgsql": "7.0.6"
-        },
-        "runtime": {
-          "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "assemblyVersion": "7.0.11.0",
-            "fileVersion": "7.0.11.0"
+          "lib/net7.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
           }
         }
       },
@@ -234,15 +175,9 @@
           }
         }
       },
-      "SharedKernel/1.0.0": {
-        "runtime": {
-          "SharedKernel.dll": {}
-        }
-      },
       "VPN.Application/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "SharedKernel": "1.0.0",
           "VPN.Domain": "1.0.0"
         },
         "runtime": {
@@ -254,14 +189,14 @@
           "VPN.Domain.dll": {}
         }
       },
-      "VPN.Persistence/1.0.0": {
+      "VPN.Infrastructure/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.14",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "VPN.Domain": "1.0.0"
         },
         "runtime": {
-          "VPN.Persistence.dll": {}
+          "VPN.Infrastructure.dll": {}
         }
       }
     }
@@ -271,27 +206,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Microsoft.AspNet.Mvc/5.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Q1LcXRqTPmbXJAdf45PsxI6JYnCQP4vBfPCgDFd4dYf8ojxFTo4PH333PC4TzbOqRHxrUWGwgBdcR5T2jNwpHQ==",
-      "path": "microsoft.aspnet.mvc/5.3.0",
-      "hashPath": "microsoft.aspnet.mvc.5.3.0.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Razor/3.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5vJ0UKE/n381qcaKwFHxCwzb/YVuHzrm155iTgQhiv7+xdg2PE+54u+NPqu6C9AeRVOiwbh8/EOZwD16bLvWkg==",
-      "path": "microsoft.aspnet.razor/3.3.0",
-      "hashPath": "microsoft.aspnet.razor.3.3.0.nupkg.sha512"
-    },
-    "Microsoft.AspNet.WebPages/3.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2ATJrA8KNx2EpBWNjwy4P+NjQ06cZWjYsTZ5NqGNIHaU/i3NKmtpoaE90NGmVRaKF5rryGfADnvPQ56f61OuWg==",
-      "path": "microsoft.aspnet.webpages/3.3.0",
-      "hashPath": "microsoft.aspnet.webpages.3.3.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/7.0.13": {
       "type": "package",
@@ -321,12 +235,12 @@
       "path": "microsoft.entityframeworkcore.analyzers/7.0.14",
       "hashPath": "microsoft.entityframeworkcore.analyzers.7.0.14.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/7.0.11": {
+    "Microsoft.EntityFrameworkCore.Relational/7.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yHEEyah1XARStV1SJOsdKj8ieoMCZ0MkNuQaLfWONMWmbqwuDohfGQZk/FuzdT4aO/lJrUYiXbBSFv0ACzphEw==",
-      "path": "microsoft.entityframeworkcore.relational/7.0.11",
-      "hashPath": "microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512"
+      "sha512": "sha512-TbTGOdaGtjps3GP7rLWXEXzmP+EXhV8AwPE/ov0QYhs5i5vKZX5ZpVLMnco2MeMtiPgLyxE7DhQT8s1wlu190g==",
+      "path": "microsoft.entityframeworkcore.relational/7.0.2",
+      "hashPath": "microsoft.entityframeworkcore.relational.7.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
@@ -412,26 +326,19 @@
       "path": "microsoft.visualstudio.azure.containers.tools.targets/1.19.5",
       "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512"
     },
-    "Microsoft.Web.Infrastructure/1.0.0": {
+    "MySqlConnector/2.2.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
-      "path": "microsoft.web.infrastructure/1.0.0",
-      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+      "sha512": "sha512-6sinY78RvryhHwpup3awdjYO7d5hhWahb5p/1VDODJhSxJggV/sBbYuKK5IQF9TuzXABiddqUbmRfM884tqA3Q==",
+      "path": "mysqlconnector/2.2.5",
+      "hashPath": "mysqlconnector.2.2.5.nupkg.sha512"
     },
-    "Npgsql/7.0.6": {
+    "Pomelo.EntityFrameworkCore.MySql/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TAqvwRnm3NJ0QvN7cvu6geJkbI0XPzGVRElVY5hF4gsgA+BnE12x6GM1TLhdeq+7ZKvvo3BD8jXKnXmr3tvdEw==",
-      "path": "npgsql/7.0.6",
-      "hashPath": "npgsql.7.0.6.nupkg.sha512"
-    },
-    "Npgsql.EntityFrameworkCore.PostgreSQL/7.0.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cHEgEz0ldXc9wVANs8sJqC+3eilqefrkasCBgaVT0tyj8tb1p3/pwy2ngjboNkDG3M0z+xJsJ4jC5p8wySAM3w==",
-      "path": "npgsql.entityframeworkcore.postgresql/7.0.11",
-      "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512"
+      "sha512": "sha512-Qk5WB/skSZet5Yrz6AN2ywjZaB1pxfAmvQ+5I4khTkLwwIamI4QJoH2NphCWLFQL+2ar8HvsNCTmwYk0qhqL0w==",
+      "path": "pomelo.entityframeworkcore.mysql/7.0.0",
+      "hashPath": "pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
@@ -461,11 +368,6 @@
       "path": "swashbuckle.aspnetcore.swaggerui/6.5.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
     },
-    "SharedKernel/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "VPN.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -476,7 +378,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "VPN.Persistence/1.0.0": {
+    "VPN.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

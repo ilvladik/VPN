@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{0AE33FF2-5F2F-41FC-A416-98ED8B01ED2E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagmentVPN.Infrastructure", "ManagmentVPN.Infrastructure\ManagmentVPN.Infrastructure.csproj", "{B1BFBA20-F6E7-4F55-B774-2C1DDE53006B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagmentVPN.Domain", "ManagmentVPN.Domain\ManagmentVPN.Domain.csproj", "{70D71FA7-6A61-4987-821E-5DA63A315C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentVPN.Application", "ManagmentVPN.Application\ManagmentVPN.Application.csproj", "{DFDEA15E-C6C3-4FB6-8B46-FD3E79D81276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagmentVPN.Application", "ManagmentVPN.Application\ManagmentVPN.Application.csproj", "{DFDEA15E-C6C3-4FB6-8B46-FD3E79D81276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentVPN.Api", "ManagmentVPN.Api\ManagmentVPN.Api.csproj", "{36ACA575-B3DA-4306-83BC-C558C65978D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0AE33FF2-5F2F-41FC-A416-98ED8B01ED2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AE33FF2-5F2F-41FC-A416-98ED8B01ED2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AE33FF2-5F2F-41FC-A416-98ED8B01ED2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AE33FF2-5F2F-41FC-A416-98ED8B01ED2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1BFBA20-F6E7-4F55-B774-2C1DDE53006B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1BFBA20-F6E7-4F55-B774-2C1DDE53006B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1BFBA20-F6E7-4F55-B774-2C1DDE53006B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{DFDEA15E-C6C3-4FB6-8B46-FD3E79D81276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFDEA15E-C6C3-4FB6-8B46-FD3E79D81276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFDEA15E-C6C3-4FB6-8B46-FD3E79D81276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36ACA575-B3DA-4306-83BC-C558C65978D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36ACA575-B3DA-4306-83BC-C558C65978D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36ACA575-B3DA-4306-83BC-C558C65978D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36ACA575-B3DA-4306-83BC-C558C65978D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

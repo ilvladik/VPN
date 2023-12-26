@@ -9,7 +9,6 @@
       "VPN.Application/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "SharedKernel": "1.0.0",
           "VPN.Domain": "1.0.0"
         },
         "runtime": {
@@ -22,11 +21,6 @@
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
           }
-        }
-      },
-      "SharedKernel/1.0.0": {
-        "runtime": {
-          "SharedKernel.dll": {}
         }
       },
       "VPN.Domain/1.0.0": {
@@ -48,11 +42,6 @@
       "sha512": "sha512-h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
-    },
-    "SharedKernel/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "VPN.Domain/1.0.0": {
       "type": "project",

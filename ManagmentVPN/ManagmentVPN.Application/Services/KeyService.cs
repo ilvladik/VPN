@@ -23,7 +23,7 @@ namespace ManagmentVPN.Application.Services
                 throw new Exception();
             using (HttpClient httpClient = new HttpClient())
             {
-                UriBuilder builder = new UriBuilder("http", "vpn.api", 1000, $"api/keys/{server.Id}");
+                UriBuilder builder = new UriBuilder("http", "vpn-api", 8001, $"api/keys/{server.Id}");
                 using var response = await httpClient.PostAsync(builder.Uri, new StringContent(string.Empty));
                 response.EnsureSuccessStatusCode();
                 var key = await response.Content.ReadFromJsonAsync<KeyDto>();
@@ -42,7 +42,7 @@ namespace ManagmentVPN.Application.Services
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                UriBuilder builder = new UriBuilder("http", "vpn.api", 1000, $"api/keys/{id}");
+                UriBuilder builder = new UriBuilder("http", "vpn-api", 8001, $"api/keys/{id}");
                 using var response = await httpClient.GetAsync(builder.Uri);
                 response.EnsureSuccessStatusCode();
                 var key = await response.Content.ReadFromJsonAsync<KeyDto>();
@@ -54,7 +54,7 @@ namespace ManagmentVPN.Application.Services
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                UriBuilder builder = new UriBuilder("http", "vpn.api", 1000, $"api/keys/{id}");
+                UriBuilder builder = new UriBuilder("http", "vpn-api", 8001, $"api/keys/{id}");
                 using var response = await httpClient.DeleteAsync(builder.Uri);
                 response.EnsureSuccessStatusCode();
                 await _unitOfWork.Keys.DeleteByIdAsync(id);
@@ -108,7 +108,7 @@ namespace ManagmentVPN.Application.Services
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                UriBuilder builder = new UriBuilder("http", "vpn.api", 1000, $"api/keys");
+                UriBuilder builder = new UriBuilder("http", "vpn-api", 8001, $"api/keys");
                 using var response = await httpClient.GetAsync(builder.Uri);
                 response.EnsureSuccessStatusCode();
                 var keys = await response.Content.ReadFromJsonAsync<IEnumerable<KeyDto>>();

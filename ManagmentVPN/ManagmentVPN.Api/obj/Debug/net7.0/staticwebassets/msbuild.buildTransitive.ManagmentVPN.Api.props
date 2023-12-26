@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ManagmentVPN.Api.props" />
+</Project>

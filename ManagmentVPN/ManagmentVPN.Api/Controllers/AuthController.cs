@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using ManagmentVPN.Domain;
 using ManagmentVPN.Domain.Entities;
+using ManagmentVPN.Application.Dtos;
 
 
 namespace ManagmentVPN.Api.Controllers
@@ -20,13 +21,14 @@ namespace ManagmentVPN.Api.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([Bind("Login,Password")] User user)
+        public async Task<IActionResult> Register([Bind("Login,Password")] UserDto user)
         {
             User? userResult = await _unitOfWork.Users.GetByLoginAsync(user.Login);
             if (userResult is not null)
-                throw new Exception("User already exists");
+                return BadRequest("User already exists");
             userResult.Id = Guid.NewGuid();
             userResult.Role = UserRole.USER;
+            userResult.VpnAccessMode = VpnAccessMode.ALLOWED;
             if (ModelState.IsValid)
             {
                 await _unitOfWork.Users.AddAsync(userResult);
@@ -40,7 +42,7 @@ namespace ManagmentVPN.Api.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([Bind("Login,Password")] User user)
+        public async Task<IActionResult> Login([Bind("Login,Password")] UserDto user)
         {
             User? userResult = await _unitOfWork.Users.GetByLoginAsync(user.Login);
             if (userResult is null || user.Password != user.Password)

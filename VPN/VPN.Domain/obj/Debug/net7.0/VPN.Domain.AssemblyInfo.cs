@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VPN.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b5c6ef5f5ae65b31321050ecdf6675272122fe4")]
 [assembly: System.Reflection.AssemblyProductAttribute("VPN.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VPN.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
