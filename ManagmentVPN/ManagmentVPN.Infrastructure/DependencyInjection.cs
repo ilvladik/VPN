@@ -8,7 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddPersistance(this IServiceCollection serviceCollection)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection)
         {
             serviceCollection
                 .AddScoped<IUnitOfWork, UnitOfWork>()

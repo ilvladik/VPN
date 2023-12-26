@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UhWXeMzfgr86KqPCs4upebrHwuCF37hSNOrxgTQxc0+Rpo+lcAdiM2oPAjIxBwuqY4tzlvLBTmIcqZRXaNTX/g==",
+  "dgSpecHash": "yQJ/lnPdVd2FJVwccPW2ztrR9FsiiI7xSwywHlRFG5EOiQoU3o88uPJgkEfyDZF/5xzqKb32r6PKuLxjHey0EA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\dotnet\\VPN\\ManagmentVPN\\ManagmentVPN.Application\\ManagmentVPN.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
