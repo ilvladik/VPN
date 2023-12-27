@@ -11,7 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection)
         {
-            string mysqlConnectionString = "server=vpn-db;database=vpn;user=vpn;password=password";
+            string mysqlConnectionString = "server=localhost;database=vpn;user=root;password=ilyin";
             serviceCollection
                 .AddDbContext<ApplicationDbContext>(
                     o => o.UseMySql(mysqlConnectionString, 

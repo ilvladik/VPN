@@ -5,6 +5,7 @@ using System.Security.Claims;
 using ManagmentVPN.Domain;
 using ManagmentVPN.Domain.Entities;
 using ManagmentVPN.Application.Dtos;
+using System.Reflection.Metadata.Ecma335;
 
 
 namespace ManagmentVPN.Api.Controllers
@@ -26,19 +27,24 @@ namespace ManagmentVPN.Api.Controllers
             User? userResult = await _unitOfWork.Users.GetByLoginAsync(user.Login);
             if (userResult is not null)
                 return BadRequest("User already exists");
-            userResult.Id = Guid.NewGuid();
-            userResult.Role = UserRole.USER;
-            userResult.VpnAccessMode = VpnAccessMode.ALLOWED;
+            User? newUser = new User
+            {
+                Id = Guid.NewGuid(),
+                Login = user.Login,
+                Password = user.Password,
+                Role = UserRole.USER,
+                VpnAccessMode = VpnAccessMode.ALLOWED
+            };
             if (ModelState.IsValid)
             {
-                await _unitOfWork.Users.AddAsync(userResult);
+                await _unitOfWork.Users.AddAsync(newUser);
                 await _unitOfWork.SaveChangesAsync();
             }
             else
             {
                 return BadRequest(ModelState);
             }
-            return Ok();
+            return Ok(newUser.Id);
         }
 
         [HttpPost("login")]
@@ -58,7 +64,7 @@ namespace ManagmentVPN.Api.Controllers
             var claimsPricipal = new ClaimsPrincipal(claimsIdentity);
             await Response.HttpContext.SignInAsync(claimsPricipal);
 
-            return Ok();
+            return Ok(userResult.Id);
         }
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()

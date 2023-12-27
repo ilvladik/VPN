@@ -20,6 +20,14 @@ namespace ManagmentVPN.Infrastructure.Configurations
             builder.HasOne(u => u.Key)
                 .WithOne(k => k.User)
                 .HasForeignKey<Key>(k => k.UserId);
+            builder.HasData(new User
+            {
+                Id = Guid.NewGuid(),
+                Login = "admin",
+                Password = "admin",
+                Role = UserRole.ADMIN,
+                VpnAccessMode = VpnAccessMode.ALLOWED
+            });
         }
     }
 }

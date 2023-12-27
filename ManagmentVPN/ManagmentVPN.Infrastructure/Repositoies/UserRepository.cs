@@ -20,12 +20,12 @@ namespace ManagmentVPN.Infrastructure.Repositoies
 
         public async Task<User?> GetByIdAsync(Guid id)
         {
-            return await _context.Users.FirstAsync(u => u.Id == id);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<User?> GetByLoginAsync(string login)
         {
-            return await _context.Users.FirstAsync(u => u.Login == login);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Login == login);
         }
 
         public async Task<IEnumerable<User>> GetAllAsync()

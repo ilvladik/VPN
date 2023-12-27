@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VPN.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7ec47d2e4b22bd09766b8869143c65c865e6493")]
 [assembly: System.Reflection.AssemblyProductAttribute("VPN.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VPN.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
